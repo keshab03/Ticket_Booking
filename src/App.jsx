@@ -14,12 +14,12 @@ const App = () => {
 
   let btn = (e) => {
     if (btns.includes(e.target.name)) {
-      // Remove the button name from the array if it's already present
+
       setBtns(btns.filter((name) => name !== e.target.name));
       setSeats(seats.filter((name) => name !== e.target.id));
       setCount(count - 1)
     } else {
-      // Add the button name to the array if it's not present
+      
       setBtns([...btns, e.target.name]);
       setSeats([...seats, e.target.id]);
       setCount(count + 1)
@@ -128,7 +128,7 @@ const App = () => {
 
         <div>
           {seats.map((x) => {
-            return <span key={x}>{x} </span>; // Use the 'key' prop when rendering dynamic elements in a loop.
+            return <span key={x}>{x} </span>;
           })}
         </div>
         <div>
